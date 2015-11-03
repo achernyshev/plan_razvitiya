@@ -21,7 +21,6 @@ class XmlFileReader extends FileReader
             ($node = & $array[$name])
             && (1 === count($node) ? $node = array($node) : 1)
             && $node = & $node[];
-
             $node = $element->count() ? $this->_xml2array($element) : trim($element);
         }
 
